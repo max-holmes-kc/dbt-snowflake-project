@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: Fact table joining orders with customer information
+    columns:
+      - name: order_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: amount
+        description: Order amount in dollars
