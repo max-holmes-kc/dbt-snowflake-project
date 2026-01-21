@@ -4,9 +4,9 @@ seeds:
   - name: customers
     description: Raw customer seed data
     config:
-      schema: raw
+      schema: RAW
       
   - name: orders
     description: Raw order seed data
     config:
-      schema: raw
+      schema: RAW

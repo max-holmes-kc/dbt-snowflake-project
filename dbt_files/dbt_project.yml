@@ -17,9 +17,9 @@ clean-targets:
 
 models:
   optio_analytics:
-    staging:
+    STAGING:
       +materialized: view
-      +schema: staging
-    marts:
+      +schema: STAGING
+    MARTS:
       +materialized: table
-      +schema: marts
+      +schema: MARTS

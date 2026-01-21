@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: raw
     database: "{{ env_var('SNOWFLAKE_DATABASE', 'ANALYTICS') }}"
-    schema: raw
+    schema: "{{ target.schema }}_RAW"
     tables:
       - name: customers
         description: Raw customer data
