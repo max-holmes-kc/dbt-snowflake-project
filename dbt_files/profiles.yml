@@ -4,6 +4,16 @@ optio_snowflake:
   outputs:
     dev:
       type: snowflake
+      account: '_'
+      user: '_'
+      password: '_'
+      database: ANALYTICS
+      warehouse: COMPUTE_WH
+      role: DBT_SERVICE_USER
+      schema: DBT_DEV
+      threads: 4
+    dev2:
+      type: snowflake
       account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
       database: "{{ env_var('SNOWFLAKE_DATABASE', 'ANALYTICS') }}"
       warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE', 'COMPUTE_WH') }}"
