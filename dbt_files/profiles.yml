@@ -14,5 +14,5 @@ optio_snowflake:
       account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
       database: "{{ env_var('SNOWFLAKE_DATABASE', 'ANALYTICS') }}"
       warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE', 'COMPUTE_WH') }}"
-      schema: 'DBT_PROD'
+      schema: DBT_PROD
       threads: 4
