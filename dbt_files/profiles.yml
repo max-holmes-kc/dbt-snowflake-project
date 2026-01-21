@@ -7,6 +7,7 @@ optio_snowflake:
       account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
       database: "{{ env_var('SNOWFLAKE_DATABASE', 'ANALYTICS') }}"
       warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE', 'COMPUTE_WH') }}"
+      role: DBT_SERVICE_USER
       schema: DBT_DEV
       threads: 4
     prod:
@@ -14,5 +15,6 @@ optio_snowflake:
       account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
       database: "{{ env_var('SNOWFLAKE_DATABASE', 'ANALYTICS') }}"
       warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE', 'COMPUTE_WH') }}"
+      role: DBT_SERVICE_USER
       schema: DBT_PROD
       threads: 4
