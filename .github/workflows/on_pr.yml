@@ -36,7 +36,7 @@ jobs:
         run: snow --version
 
       # The -x is shorthand for --temporary-connection
-      - run: snow connection test -x
+      - run: snow connection test -x --role DBT_SERVICE_USER
 
       # The --force setting creates the object or updates it if it already exists
       # You can remove the "-- source" flag if your dbt_project.yml is at root of your repo
