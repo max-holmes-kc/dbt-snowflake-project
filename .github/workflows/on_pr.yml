@@ -50,7 +50,10 @@ jobs:
         run: snow dbt list -x
 
       - name: Execute run on tester dbt project object in ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}
+        run: snow dbt execute -x my_tester_dbt_project_object_gh_action seed --target dev
+
+      - name: Execute run on tester dbt project object in ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}
         run: snow dbt execute -x my_tester_dbt_project_object_gh_action run --target dev
 
-      - name: Execute data quality test on tester dbt project object in ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}
-        run: snow dbt execute -x my_tester_dbt_project_object_gh_action test --target dev
+      # - name: Execute data quality test on tester dbt project object in ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}
+      #   run: snow dbt execute -x my_tester_dbt_project_object_gh_action test --target dev

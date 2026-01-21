@@ -1,0 +1,12 @@
+version: 2
+
+seeds:
+  - name: customers
+    description: Raw customer seed data
+    config:
+      schema: raw
+      
+  - name: orders
+    description: Raw order seed data
+    config:
+      schema: raw
