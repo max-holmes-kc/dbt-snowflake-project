@@ -12,7 +12,8 @@
     {%- for row in mapping_data -%}
         {%- set src_col = row[source_column] -%}
         {%- if src_col and src_col | trim != '' -%}
-            {%- set _ = column_list.append(src_col ~ ' as ' ~ row['target_column_name']) -%}
+            {%- set data_type = row['data_type'] -%}
+            {%- set _ = column_list.append('cast(' ~ src_col ~ ' as ' ~ data_type ~ ') as ' ~ row['target_column_name']) -%}
         {%- endif -%}
     {%- endfor -%}
     {{ column_list | join(',\n        ') }}

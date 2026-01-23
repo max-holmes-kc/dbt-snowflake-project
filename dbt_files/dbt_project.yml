@@ -28,95 +28,114 @@ vars:
   policy_mapping:
     - target_column_name: pol_sdate
       target_column_description: Policy Start Date
+      data_type: DATE
       circles_column_name: policy_start_dt
       s_insurance_column_name: eff_date
 
     - target_column_name: pol_edate
       target_column_description: Policy End Date
+      data_type: DATE
       circles_column_name: policy_end_dt
       s_insurance_column_name: exp_date
 
     - target_column_name: pol_renewal_date
       target_column_description: Policy Renewal Date
+      data_type: DATE
       circles_column_name: renewal_dt
       s_insurance_column_name: renewal_date
 
     - target_column_name: p_key
       target_column_description: Policy Key
+      data_type: VARCHAR
       circles_column_name: policy_key
       s_insurance_column_name: pol_id
 
     - target_column_name: py_key
       target_column_description: Policy Year Key
+      data_type: VARCHAR
       circles_column_name: policy_year_key
       s_insurance_column_name: pol_year_id
 
     - target_column_name: p_number
       target_column_description: Policy Number
+      data_type: VARCHAR
       circles_column_name: policy_num
       s_insurance_column_name: policy_number
 
     - target_column_name: p_status
       target_column_description: Policy Status
+      data_type: VARCHAR
       circles_column_name: status_cd
       s_insurance_column_name: policy_status
 
     - target_column_name: p_type
       target_column_description: Policy Type
+      data_type: VARCHAR
       circles_column_name: policy_type_cd
       s_insurance_column_name: type_code
 
     - target_column_name: p_amount
       target_column_description: Policy Amount
+      data_type: NUMBER(18,2)
       circles_column_name: total_amt
       s_insurance_column_name: policy_amount
 
     - target_column_name: premium_amt
       target_column_description: Premium Amount
+      data_type: NUMBER(18,2)
       circles_column_name: premium_amt
       s_insurance_column_name: annual_premium
 
     - target_column_name: deductible_amt
       target_column_description: Deductible Amount
+      data_type: NUMBER(18,2)
       circles_column_name: deductible_amt
       s_insurance_column_name: deductible
 
     - target_column_name: coverage_limit
       target_column_description: Coverage Limit
+      data_type: NUMBER(18,2)
       circles_column_name: coverage_limit_amt
       s_insurance_column_name: limit_amount
 
     - target_column_name: insured_party_id
       target_column_description: Insured Party ID
+      data_type: VARCHAR
       circles_column_name: insured_id
       s_insurance_column_name: party_id
 
     - target_column_name: agent_id
       target_column_description: Agent ID
+      data_type: VARCHAR
       circles_column_name: agent_id
       s_insurance_column_name: agent_code
 
     - target_column_name: underwriter_id
       target_column_description: Underwriter ID
+      data_type: VARCHAR
       circles_column_name: underwriter_id
       s_insurance_column_name: uw_id
 
     - target_column_name: policy_term_months
       target_column_description: Policy Term Months
+      data_type: INTEGER
       circles_column_name: term_months
       s_insurance_column_name: term_length
 
     - target_column_name: cancellation_date
       target_column_description: Cancellation Date
+      data_type: DATE
       circles_column_name: cancel_dt
       s_insurance_column_name: cancelled_date
 
     - target_column_name: last_modified_date
       target_column_description: Last Modified Date
+      data_type: TIMESTAMP_NTZ
       circles_column_name: last_upd_dt
       s_insurance_column_name: modified_date
 
     - target_column_name: created_date
       target_column_description: Created Date
+      data_type: TIMESTAMP_NTZ
       circles_column_name: created_dt
       s_insurance_column_name: create_date
