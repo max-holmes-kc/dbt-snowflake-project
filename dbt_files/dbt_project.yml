@@ -20,9 +20,15 @@ models:
     staging:
       +materialized: table
       +schema: STAGING
+      +persist_docs:
+        relation: true
+        columns: true
     marts:
       +materialized: table
       +schema: MARTS
+      +persist_docs:
+        relation: true
+        columns: true
 
 vars:
   policy_mapping:
