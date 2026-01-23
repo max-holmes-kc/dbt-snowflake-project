@@ -1,9 +1,9 @@
 with circles_policies as (
-    select * from {{ ref('circles_policies') }}
+    select * from {{ ref('stg_circles_policies') }}
 ),
 
 s_insurance_policies as (
-    select * from {{ ref('s_insurance_policies') }}
+    select * from {{ ref('stg_s_insurance_policies') }}
 ),
 
 final as (

@@ -1,8 +1,8 @@
 version: 2
 
 models:
-  - name: circles_policies
+  - name: stg_circles_policies
     description: Staged policy data from circles system with cleaned and standardized fields
 
-  - name: s_insurance_policies
+  - name: stg_s_insurance_policies
     description: Staged policy data from s_insurance system with cleaned and standardized fields
