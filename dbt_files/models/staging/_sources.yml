@@ -9,10 +9,5 @@ sources:
         description: Raw circles policy data
       - name: s_insurance_policies
         description: Raw s insurance policy data
-
-  - name: seeds
-    database: "{{ env_var('SNOWFLAKE_DATABASE', 'ANALYTICS') }}"
-    schema: "{{ target.schema }}_SEEDS"
-    tables:
       - name: policy_mapping
         description: Policy mapping data

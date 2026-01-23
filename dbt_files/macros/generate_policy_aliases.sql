@@ -11,7 +11,7 @@
         select 
             target_column_name,
             {{ source_column }} as source_column_name
-        from {{ ref('policy_mapping') }}
+        from {{ source('raw', 'policy_mapping') }}
         where {{ source_column }} is not null 
           and trim({{ source_column }}) != ''
     {%- endset -%}
