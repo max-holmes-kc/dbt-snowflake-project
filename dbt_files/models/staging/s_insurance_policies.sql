@@ -5,7 +5,7 @@ with source as (
 renamed as (
     select
         {{ generate_policy_aliases('s_insurance') }},
-        "s_insurance" as source_system
+        's_insurance' as source_system
     from source
     
 )

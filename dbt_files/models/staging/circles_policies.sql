@@ -5,7 +5,7 @@ with source as (
 renamed as (
     select
         {{ generate_policy_aliases('circles') }},
-        "circles" as source_system
+        'circles' as source_system
     from source
 )
 
