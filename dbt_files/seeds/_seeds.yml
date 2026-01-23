@@ -10,8 +10,3 @@ seeds:
     description: Raw policy data from s_insurance system
     config:
       schema: RAW
-
-  - name: policy_mapping
-    description: Policy mapping data
-    config:
-      schema: RAW

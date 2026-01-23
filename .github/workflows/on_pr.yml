@@ -43,13 +43,13 @@ jobs:
 
       # The --force setting creates the object or updates it if it already exists
       # You can remove the "-- source" flag if your dbt_project.yml is at root of your repo
-      - name: Create a new tester dbt project object in ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}
+      - name: Deploy dbt project to ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}
         run: snow dbt deploy my_tester_dbt_project_object_gh_action --source ./dbt_files --force -x
 
-      - name: Execute run on tester dbt project object in ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}
+      - name: Seed dbt project in ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}
         run: snow dbt execute -x my_tester_dbt_project_object_gh_action seed --target dev
 
-      - name: Execute run on tester dbt project object in ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}
+      - name: Run dbt project in ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}
         run: snow dbt execute -x my_tester_dbt_project_object_gh_action run --target dev
 
       # - name: Execute data quality test on tester dbt project object in ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}

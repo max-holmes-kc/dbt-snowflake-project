@@ -9,5 +9,3 @@ sources:
         description: Raw circles policy data
       - name: s_insurance_policies
         description: Raw s insurance policy data
-      - name: policy_mapping
-        description: Policy mapping data
