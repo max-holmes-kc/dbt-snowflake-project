@@ -1,24 +1,8 @@
 version: 2
 
 models:
-  - name: stg_customers
-    description: Staged customer data with cleaned fields
-    columns:
-      - name: customer_id
-        description: Primary key
-        tests:
-          - unique
-          - not_null
+  - name: circles_policies
+    description: Staged policy data from circles system with cleaned and standardized fields
 
-  - name: stg_orders
-    description: Staged order data with amount converted to dollars
-    columns:
-      - name: order_id
-        description: Primary key
-        tests:
-          - unique
-          - not_null
-      - name: customer_id
-        description: Foreign key to customers
-        tests:
-          - not_null
+  - name: s_insurance_policies
+    description: Staged policy data from s_insurance system with cleaned and standardized fields

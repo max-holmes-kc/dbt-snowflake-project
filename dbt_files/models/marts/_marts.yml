@@ -1,16 +1,13 @@
 version: 2
 
 models:
-  - name: fct_orders
-    description: Fact table joining orders with customer information
+  - name: fact_policy
+    description: Fact table combining policy data from all source systems
     columns:
-      - name: order_id
-        description: Primary key
-        tests:
-          - unique
-          - not_null
-      - name: customer_id
+{{ generate_fact_policy_columns() }}
+      - name: source_system
+        description: Identifies the source system (circles or s_insurance)
         tests:
           - not_null
-      - name: amount
-        description: Order amount in dollars
+          - accepted_values:
+              values: ['circles', 's_insurance']

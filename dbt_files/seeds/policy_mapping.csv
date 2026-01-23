@@ -1,0 +1,20 @@
+target_column_name,target_column_description,circles_column_name,s_insurance_column_name
+pol_sdate,Policy Start Date,policy_start_dt,eff_date
+pol_edate,Policy End Date,policy_end_dt,exp_date
+pol_renewal_date,Policy Renewal Date,renewal_dt,renewal_date
+p_key,Policy Key,policy_key,pol_id
+py_key,Policy Year Key,policy_year_key,pol_year_id
+p_number,Policy Number,policy_num,policy_number
+p_status,Policy Status,status_cd,policy_status
+p_type,Policy Type,policy_type_cd,type_code
+p_amount,Policy Amount,total_amt,policy_amount
+premium_amt,Premium Amount,premium_amt,annual_premium
+deductible_amt,Deductible Amount,deductible_amt,deductible
+coverage_limit,Coverage Limit,coverage_limit_amt,limit_amount
+insured_party_id,Insured Party ID,insured_id,party_id
+agent_id,Agent ID,agent_id,agent_code
+underwriter_id,Underwriter ID,underwriter_id,uw_id
+policy_term_months,Policy Term Months,term_months,term_length
+cancellation_date,Cancellation Date,cancel_dt,cancelled_date
+last_modified_date,Last Modified Date,last_upd_dt,modified_date
+created_date,Created Date,created_dt,create_date
