@@ -1,10 +1,49 @@
+# AUTO-GENERATED from policy_mapping.csv
+# Run: python scripts/generate_marts_schema.py
 version: 2
 
 models:
   - name: fact_policy
     description: Fact table combining policy data from all source systems
     columns:
-{{ generate_fact_policy_columns() }}
+      - name: pol_sdate
+        description: "Policy Start Date"
+      - name: pol_edate
+        description: "Policy End Date"
+      - name: pol_renewal_date
+        description: "Policy Renewal Date"
+      - name: p_key
+        description: "Policy Key"
+      - name: py_key
+        description: "Policy Year Key"
+      - name: p_number
+        description: "Policy Number"
+      - name: p_status
+        description: "Policy Status"
+      - name: p_type
+        description: "Policy Type"
+      - name: p_amount
+        description: "Policy Amount"
+      - name: premium_amt
+        description: "Premium Amount"
+      - name: deductible_amt
+        description: "Deductible Amount"
+      - name: coverage_limit
+        description: "Coverage Limit"
+      - name: insured_party_id
+        description: "Insured Party ID"
+      - name: agent_id
+        description: "Agent ID"
+      - name: underwriter_id
+        description: "Underwriter ID"
+      - name: policy_term_months
+        description: "Policy Term Months"
+      - name: cancellation_date
+        description: "Cancellation Date"
+      - name: last_modified_date
+        description: "Last Modified Date"
+      - name: created_date
+        description: "Created Date"
       - name: source_system
         description: Identifies the source system (circles or s_insurance)
         tests:
