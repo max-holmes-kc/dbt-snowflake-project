@@ -10,7 +10,7 @@ final as (
     select
         *
     from circles_policies
-    union by name all
+    union by name
     select
         *
     from s_insurance_policies
